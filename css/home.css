@@ -1,3 +1,494 @@
+  body {
+    /* font-family: 'Teko', sans-serif; */
+    font-family: 'Cairo', sans-serif;
+  }
+  header {
+    width: 100vw;
+    height: 80px;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+  
+  }
+  .header__left {
+    line-height: 80px;
+    font-family: 'Righteous', cursive;
+  }
+  .header__right {
+    line-height: 80px;
+    display: flex;
+  }
+  .contents {
+    font-size: 20px;
+    padding:0 10px;
+    cursor: pointer;
+  }
+  .contents:hover {
+    background-color: gold;
+  }
+  
+  .top--image {
+    width: 100vw;
+    height: 400px;
+    background-color: #ffc138;
+    position: relative;
+  }
+  
+  .phone-frame {
+    border: 2px solid black;
+    border-radius: 16px;
+    width: 200px;
+    height: 340px;
+    position: absolute;
+    right: 80px;
+    top: 220px;
+    animation-name: fade-in2;
+    animation-duration: 3s; //郢ｧ�｢郢昜ｹ斟鍋ｹ晢ｽｼ郢ｧ�ｷ郢晢ｽｧ郢晢ｽｳ隴弱ｋ菫｣
+    animation-timing-function: ease-out; //郢ｧ�｢郢昜ｹ斟鍋ｹ晢ｽｼ郢ｧ�ｷ郢晢ｽｧ郢晢ｽｳ邵ｺ霈披雷郢ｧ荵昴≧郢晢ｽｼ郢ｧ�ｸ郢晢ｽｳ郢ｧ�ｰ
+    animation-delay: 1s; //郢ｧ�｢郢昜ｹ斟鍋ｹ晢ｽｼ郢ｧ�ｷ郢晢ｽｧ郢晢ｽｳ鬮｢蜿･�ｧ荵晢ｼ�ｸｺ蟶呻ｽ玖ｭ弱ｋ菫｣
+    animation-iteration-count: 1; //驛｢�ｰ郢ｧ鬘假ｽｿ譁撰ｼ陜玲ｨ顔�
+    animation-direction: normal; //陟陟包ｽｩ陷�ｽｦ騾�ｿｽ�堤ｸｺ蜷ｶ�狗ｸｺ荵昶�邵ｺ�ｽﾂｰ
+    animation-fill-mode: forwards; //郢ｧ�｢郢昜ｹ斟鍋ｹ晢ｽｼ
+  }
+  
+  #aaa {
+    position: absolute;
+    top: 45px;
+    left: 40px;
+    font-family: 'Righteous', cursive;
+    animation-name: fade-in1;
+    animation-duration: 8s; //繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ譎る俣
+    animation-timing-function: ease-out; //繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ縺輔○繧九う繝ｼ繧ｸ繝ｳ繧ｰ
+    animation-delay: 10s; //繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ髢句ｧ九＆縺帙ｋ譎る俣
+    animation-iteration-count: 1; //郢ｰ繧願ｿ斐＠蝗樊焚
+    animation-direction: normal; //蠕蠕ｩ蜃ｦ逅�ｒ縺吶ｋ縺九←縺�°
+    animation-fill-mode: forwards; //繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ蠕後�繧ｹ繧ｿ繧､繝ｫ繧偵←縺�☆繧九°
+  }
+  
+  #phone {
+    width: 185px;
+    position: absolute;
+    right: 108px;
+    top: 45px;
+    animation-name: fade-in2;
+    animation-duration: 3s; //郢ｧ�｢郢昜ｹ斟鍋ｹ晢ｽｼ郢ｧ�ｷ郢晢ｽｧ郢晢ｽｳ隴弱ｋ菫｣
+    animation-timing-function: ease-out; //郢ｧ�｢郢昜ｹ斟鍋ｹ晢ｽｼ郢ｧ�ｷ郢晢ｽｧ郢晢ｽｳ邵ｺ霈披雷郢ｧ荵昴≧郢晢ｽｼ郢ｧ�ｸ郢晢ｽｳ郢ｧ�ｰ
+    animation-delay: 1s; //郢ｧ�｢郢昜ｹ斟鍋ｹ晢ｽｼ郢ｧ�ｷ郢晢ｽｧ郢晢ｽｳ鬮｢蜿･�ｧ荵晢ｼ�ｸｺ蟶呻ｽ玖ｭ弱ｋ菫｣
+    animation-iteration-count: 1; //驛｢�ｰ郢ｧ鬘假ｽｿ譁撰ｼ陜玲ｨ顔�
+    animation-direction: normal; //陟陟包ｽｩ陷�ｽｦ騾�ｿｽ�堤ｸｺ蜷ｶ�狗ｸｺ荵昶�邵ｺ�ｽﾂｰ
+    animation-fill-mode: forwards; //郢ｧ�｢郢昜ｹ斟鍋ｹ晢ｽｼ郢ｧ�ｷ郢晢ｽｧ郢晢ｽｳ陟募ｾ鯉ｿｽ郢ｧ�ｹ郢ｧ�ｿ郢ｧ�､郢晢ｽｫ郢ｧ蛛ｵ竊千ｸｺ�ｽ笘�ｹｧ荵敖ｰ
+  }
+  .phone--inner {
+    width: 100px;
+    position: absolute;
+    right: 130px;
+    top: 520px;
+    text-align: center;
+    /* background-color: aqua; */
+    animation-name: fade-in2;
+    animation-duration: 3s; //郢ｧ�｢郢昜ｹ斟鍋ｹ晢ｽｼ郢ｧ�ｷ郢晢ｽｧ郢晢ｽｳ隴弱ｋ菫｣
+    animation-timing-function: ease-out; //郢ｧ�｢郢昜ｹ斟鍋ｹ晢ｽｼ郢ｧ�ｷ郢晢ｽｧ郢晢ｽｳ邵ｺ霈披雷郢ｧ荵昴≧郢晢ｽｼ郢ｧ�ｸ郢晢ｽｳ郢ｧ�ｰ
+    animation-delay: 1s; //郢ｧ�｢郢昜ｹ斟鍋ｹ晢ｽｼ郢ｧ�ｷ郢晢ｽｧ郢晢ｽｳ鬮｢蜿･�ｧ荵晢ｼ�ｸｺ蟶呻ｽ玖ｭ弱ｋ菫｣
+    animation-iteration-count: 1; //驛｢�ｰ郢ｧ鬘假ｽｿ譁撰ｼ陜玲ｨ顔�
+    animation-direction: normal; //陟陟包ｽｩ陷�ｽｦ騾�ｿｽ�堤ｸｺ蜷ｶ�狗ｸｺ荵昶�邵ｺ�ｽﾂｰ
+    animation-fill-mode: forwards; //郢ｧ�｢郢昜ｹ斟鍋ｹ晢ｽｼ郢ｧ�ｷ郢晢ｽｧ郢晢ｽｳ陟募ｾ鯉ｿｽ郢ｧ�ｹ郢ｧ�ｿ郢ｧ�､郢晢ｽｫ郢ｧ蛛ｵ竊千ｸｺ�ｽ笘�ｹｧ荵敖ｰ
+  
+  }
+  @keyframes fade-in2 {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, -100px, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  
+  #brand {
+    font-size: 20px;
+    padding: 10px 0 10px 0;
+    font-weight: bold;
+    font-family: 'Righteous', cursive;
+    text-align: right;
+  }
+  
+  #buy-button {
+    background-color:#ffc138;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #buy-button:hover {
+    background-color: gold;
+  }
+  
+  .title {
+    font-size: 50px;
+    font-family: 'Righteous', cursive;
+    /* margin-top: -100px; */
+    line-height: 60px;
+    position: absolute;
+    top: 60px;
+    left: 50px;
+    animation-name: title;
+    animation-duration: 2s; //郢ｧ�｢郢昜ｹ斟鍋ｹ晢ｽｼ郢ｧ�ｷ郢晢ｽｧ郢晢ｽｳ隴弱ｋ菫｣
+    animation-timing-function: ease-out; //郢ｧ�｢郢昜ｹ斟鍋ｹ晢ｽｼ郢ｧ�ｷ郢晢ｽｧ郢晢ｽｳ邵ｺ霈披雷郢ｧ荵昴≧郢晢ｽｼ郢ｧ�ｸ郢晢ｽｳ郢ｧ�ｰ
+    animation-delay: 1s; //郢ｧ�｢郢昜ｹ斟鍋ｹ晢ｽｼ郢ｧ�ｷ郢晢ｽｧ郢晢ｽｳ鬮｢蜿･�ｧ荵晢ｼ�ｸｺ蟶呻ｽ玖ｭ弱ｋ菫｣
+    animation-iteration-count: 1; //驛｢�ｰ郢ｧ鬘假ｽｿ譁撰ｼ陜玲ｨ顔�
+    animation-direction: normal; //陟陟包ｽｩ陷�ｽｦ騾�ｿｽ�堤ｸｺ蜷ｶ�狗ｸｺ荵昶�邵ｺ�ｽﾂｰ
+    animation-fill-mode: forwards; //郢ｧ�｢郢昜ｹ斟鍋ｹ晢ｽｼ郢ｧ�ｷ郢晢ｽｧ郢晢ｽｳ陟募ｾ鯉ｿｽ郢ｧ�ｹ郢ｧ�ｿ郢ｧ�､郢晢ｽｫ郢ｧ蛛ｵ竊千ｸｺ�ｽ笘�ｹｧ荵敖ｰ
+  }
+  .title2 {
+    font-size: 50px;
+    font-family: 'Righteous', cursive;
+    /* margin-top: -100px; */
+    line-height: 60px;
+    position: absolute;
+    top: 130px;
+    left: 70px;
+    animation-name: title;
+    animation-duration: 2s; //郢ｧ�｢郢昜ｹ斟鍋ｹ晢ｽｼ郢ｧ�ｷ郢晢ｽｧ郢晢ｽｳ隴弱ｋ菫｣
+    animation-timing-function: ease-out; //郢ｧ�｢郢昜ｹ斟鍋ｹ晢ｽｼ郢ｧ�ｷ郢晢ｽｧ郢晢ｽｳ邵ｺ霈披雷郢ｧ荵昴≧郢晢ｽｼ郢ｧ�ｸ郢晢ｽｳ郢ｧ�ｰ
+    animation-delay: 1s; //郢ｧ�｢郢昜ｹ斟鍋ｹ晢ｽｼ郢ｧ�ｷ郢晢ｽｧ郢晢ｽｳ鬮｢蜿･�ｧ荵晢ｼ�ｸｺ蟶呻ｽ玖ｭ弱ｋ菫｣
+    animation-iteration-count: 1; //驛｢�ｰ郢ｧ鬘假ｽｿ譁撰ｼ陜玲ｨ顔�
+    animation-direction: normal; //陟陟包ｽｩ陷�ｽｦ騾�ｿｽ�堤ｸｺ蜷ｶ�狗ｸｺ荵昶�邵ｺ�ｽﾂｰ
+    animation-fill-mode: forwards; //郢ｧ�｢郢昜ｹ斟鍋ｹ晢ｽｼ郢ｧ�ｷ郢晢ｽｧ郢晢ｽｳ陟募ｾ鯉ｿｽ郢ｧ�ｹ郢ｧ�ｿ郢ｧ�､郢晢ｽｫ郢ｧ蛛ｵ竊千ｸｺ�ｽ笘�ｹｧ荵敖ｰ
+  }
+  
+  @keyframes title {
+    0% {
+      opacity: 0;
+      transform: translate3d(30px, 0, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  .top--image__bottom {
+    width: 100vw;
+    height: 200px;
+    background-color: whitesmoke;
+    position: absolute;
+    top: 480px;
+    z-index: -1;
+    padding: 0 20px;
+  }
+  
+  #words {
+    line-height: 200px;
+    color: white;
+    font-size: 60px;
+    text-align: center;
+    animation-name: fade-in1;
+    animation-duration: 5s; //繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ譎る俣
+    animation-timing-function: ease-out; //繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ縺輔○繧九う繝ｼ繧ｸ繝ｳ繧ｰ
+    animation-delay: 5s; //繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ髢句ｧ九＆縺帙ｋ譎る俣
+    animation-iteration-count: 1; //郢ｰ繧願ｿ斐＠蝗樊焚
+    animation-direction: normal; //蠕蠕ｩ蜃ｦ逅�ｒ縺吶ｋ縺九←縺�°
+    animation-fill-mode: forwards; //繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ蠕後�繧ｹ繧ｿ繧､繝ｫ繧偵←縺�☆繧九°
+  }
+  
+  @keyframes fade-in1 {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  i {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900; 
+    content: "\f007"; 
+  }
+  
+  .phone--info {
+    display: flex;
+  }
+  
+  #wifi{
+    margin-top: 8px;
+    margin-left: 100px;
+    height: 15px;
+  }
+  #btt {
+    height: 15px;
+    margin-top: 8px;
+    margin-left: 5px;
+  }
+  
+  .site--info {
+    height: max-content;
+    width: 100vw;
+    margin-bottom: 50px;
+  }
+  
+  .none {
+    height: 200px;
+    width: 100vw;
+  }
+  
+  .info--text {
+    font-family: 'Kosugi', sans-serif;
+    text-align: center;
+  }
+  
+  .contents-title {
+    font-family: 'Righteous', cursive;
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  
+  #APP {
+    color: #ffc138;
+    font-size: 60px;
+  }
+  
+  .phone-frame1 {
+    border: 2px solid black;
+    border-radius: 16px;
+    width: 172px;
+    height: 340px;
+    position: relative;
+    margin-right: 20px;
+    display: none;
+  }
+  #wifi1{
+    margin-top: 8px;
+    margin-left: 70px;
+    height: 15px;
+  }
+  #btt1 {
+    height: 15px;
+    margin-top: 8px;
+    margin-left: 5px;
+  }
+  #phone-image1 {
+    width: 170px;
+    position: absolute;
+    top: 30px;
+  }
+  .phone--info1 {
+    display: flex;
+  }
+  
+  .phone-frame2 {
+    border: 2px solid black;
+    border-radius: 16px;
+    width: 150px;
+    height: 300px;
+    position: relative;
+    margin-right: 20px;
+    margin-top: 20px;
+  }
+  #wifi2{
+    margin-top: 8px;
+    margin-left: 55px;
+    height: 12px;
+  }
+  #btt2 {
+    height: 12px;
+    margin-top: 8px;
+    margin-left: 5px;
+  }
+  #phone-image2 {
+    width: 145px;
+    position: absolute;
+    top: 30px;
+  }
+  .phone--info2 {
+    display: flex;
+  }
+  
+  .phone-frame3 {
+    border: 2px solid black;
+    border-radius: 16px;
+    width: 150px;
+    height: 300px;
+    position: relative;
+    margin-right: 20px;
+    margin-top: 40px;
+  }
+  #wifi3{
+    margin-top: 8px;
+    margin-left: 55px;
+    height: 12px;
+  }
+  #btt3 {
+    height: 12px;
+    margin-top: 8px;
+    margin-left: 5px;
+  }
+  #phone-image3 {
+    width: 145px;
+    position: absolute;
+    top: 30px;
+  }
+  .phone--info3 {
+    display: flex;
+  }
+  
+  .info--image {
+    display: flex;
+    justify-content: center;
+    width: 95vw;
+    margin: 0 auto;
+    padding: 50px 0;
+  }
+  
+  #buy-button1 {
+    position: absolute;
+    top: 285px;
+    left: 35px;
+    background-color: gray;
+    padding: 0 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  #buy-button2 {
+    position: absolute;
+    top: 250px;
+    left: 25px;
+    background-color: blue;
+    padding: 0 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  #buy-button3 {
+    position: absolute;
+    top: 250px;
+    left: 25px;
+    background-color: #ffc138;
+    padding: 0 20px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .contents-text {
+    margin-bottom: 20px;
+    font-size: 10px;
+  }
+  
+  #name {
+    font-size: 20px;
+    font-family: 'Righteous', cursive;
+  }
+  
+  .data-area {
+    width: 100vw;
+    height: max-content;
+    text-align: center;
+    background-color: whitesmoke;
+    padding: 30px 0 50px 0;
+  }
+  
+  #graph {
+    margin:  0 auto;
+    width: 250px;
+  }
+  #demo_box2 {
+    width: 170px;
+    position: absolute;
+    right: 80px;
+    top: 90px;
+  }
+  
+  #demo_box2 {
+    width:100px;
+    height: 100px;
+  }
+  #demo_box2 img{
+    position: absolute;
+    height: 100px;
+    opacity: 0;
+  }
+  #sneaker2{
+    padding-left: 20px;
+  }
+  
+  #demo_box2 .image1{
+    animation:ani2 10s infinite;
+    -webkit-animation: ani2 10s infinite;
+  }
+  #demo_box2 .image2{
+    animation:ani2 10s 5s infinite;
+    -webkit-animation: ani2 10s 5s infinite;
+  }
+  
+  
+  @keyframes ani2 {
+    0%   { opacity: 0; }
+    20%  { opacity: 1; }
+    40%  { opacity: 1; }
+    60%  { opacity: 0; }
+    80%  { opacity: 0; }
+    100% { opacity: 0; }
+  }
+  @-webkit-keyframes ani2 {
+    0%   { opacity: 0; }
+    20%  { opacity: 1; }
+    40%  { opacity: 1; }
+    60%  { opacity: 0; }
+    80%  { opacity: 0; }
+    100% { opacity: 0; }
+  }
+  
+  .form--area {
+    width: 100vw;
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .text-field {
+    width: 300px;
+    border: solid 1px black;
+  }
+  .text-field-a {
+    width: 300px;
+    height: 200px;
+    border: solid 1px black;
+  }
+  
+  #ccc {
+    margin-top: 50px;
+  }
+  
+  button {
+    background-color: #ffc138;
+    margin-top: 30px;
+    width: 300px;
+  }
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(min-width: 376px){
 body {
   /* font-family: 'Teko', sans-serif; */
   font-family: 'Cairo', sans-serif;
@@ -458,6 +949,7 @@ button {
   background-color: #ffc138;
   margin-top: 30px;
   width: 500px;
+}
 }
 
 @media(min-width: 900px){
